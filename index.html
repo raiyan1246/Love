@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -119,72 +119,4 @@
 
     <div class="slide">
       <p class="main-text">"Dil se dua hai ke tumhari nayi zindagi khushiyon se bhar jaye. Tumhe har wo khushi mile jiski tum haqdaar ho."</p>
-      <p class="sub-text">"Tumhari khushi se zyada mere liye kuch ahem nahi hai. Tum khush rahogi, toh mera dil bhi sukoon mein rahega."</p>
-    </div>
-
-    <div class="slide">
-      <p class="main-text">"Zindagi kisi bhi mod par le jaye, ek baat hamesha yaad rakhna..."</p>
-      <p class="sub-text" style="color: #ff4d6d; font-weight: 500;">"Mere darwaze aur meri baahein tumhare liye hamesha khuli hain. Jab bhi tumhe kisi madad, kisi sahare, ya bas ek dost ki zaroorat ho..."</p>
-    </div>
-
-    <div class="slide">
-      <p class="main-text">"Main hamesha yahin hoon, tumhare saath, tumhare liye."</p>
-      <p class="sub-text">"Hamesha khush rehna. Khuda tumhein har buri nazar se bachaye aur tumhari jodi hamesha salamat rakhe. Ameen."</p>
-    </div>
-
-    <div class="btn-container">
-      <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Aage Badhein</button>
-    </div>
-  </div>
-
-  <!-- Background Music Track -->
-  <audio id="bgMusic" loop preload="auto">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const music = document.getElementById('bgMusic');
-    const nextBtn = document.getElementById('nextBtn');
-
-    function nextSlide() {
-      // Start music on first tap
-      if (music.paused) {
-        music.play().catch(() => {});
-      }
-
-      slides[currentSlide].classList.remove('active');
-      currentSlide++;
-
-      if (currentSlide < slides.length) {
-        slides[currentSlide].classList.add('active');
-        if (currentSlide === slides.length - 1) {
-          nextBtn.textContent = "Khush Rahna";
-        }
-      } else {
-        currentSlide = 0;
-        slides[currentSlide].classList.add('active');
-        nextBtn.textContent = "Aage Badhein";
-      }
-    }
-
-    // Generate Petals
-    function createPetal() {
-      const petal = document.createElement('div');
-      petal.classList.add('petal');
-      petal.style.left = Math.random() * 100 + 'vw';
-      petal.style.width = Math.random() * 12 + 8 + 'px';
-      petal.style.height = Math.random() * 12 + 8 + 'px';
-      petal.style.animationDuration = Math.random() * 3 + 4 + 's';
-      document.body.appendChild(petal);
-
-      setTimeout(() => {
-        petal.remove();
-      }, 7000);
-    }
-
-    setInterval(createPetal, 350);
-  </script>
-</body>
-</html>
+      <p class="sub-text">"Tumhari khushi se zyada mere liye kuch ahem nahi hai. Tum khush rahogi, toh mera 
